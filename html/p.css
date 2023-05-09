@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #e67e22;
+  }
+  
+  section {
+    margin: 20px;
+  }
+  
+  section h2 {
+    margin: 0;
+  }
+  
+  .productos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .productos article {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+  
+  .productos img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .info-producto {
+    background-color: #f7dc6f;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .info-producto h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .info-producto p {
+    margin: 0;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+  
+  .precio {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .btn-comprar {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-comprar:hover {
+    background-color: #d35400;
+  }
+  
+  footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .productos article {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .productos article {
+      width: 100%;
+    }
+  }
