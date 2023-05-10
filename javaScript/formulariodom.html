@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Manejo de formularios con DOM</title>
+  </head>
+  <body>
+    <form id="formulario" action="">
+        <label for="nombre">Nombre</label><br/>
+        <input type="text" id="nombre" name="nombre" value="Pepito"><br/>
+        <label for="apellido">Apellido</label><br/>
+        <input type="text" id="apellido" name="apellido" value="Perez"><br/>
+    </form>
+    <button type="button" onclick="mostrar()">Mostrar datos</button>
+    <div id="contenido"></div>
+    <script>
+        //Ejemplo de uso de formulario
+        //var texto = '';
+
+        function mostrar(){
+            //obtenemos el formulario
+            var formulario =document.forms['formulario'];
+            //texto += 'Bienvenido ';
+            var texto = '';
+
+            var nombre = formulario['nombre'];
+            var apellido = formulario['apellido'];
+            texto = nombre.value + ' ' + apellido.value;
+            /*for(var elemento of formulario){
+                texto += ' ' + elemento.value ;
+            }
+            texto += '<br/>';*/
+            //console.log(texto);
+            document.getElementById('contenido').innerHTML = texto;
+        }
+    </script>
+  </body>
+</html>

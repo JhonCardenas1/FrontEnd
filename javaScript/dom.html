@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Manejo del DOM</title>
+  </head>
+  <style>
+    .red{
+        color: red;
+    }
+  </style>
+  <body>
+    <h1 id="titulo" class="red">Manejo del DOM</h1>
+    <p id="parrafo" class="red">Empezamos a usar el DOM.</p>
+    <p id="parrafo2" class="red">Este es mi segundo parrafo.</p>
+    <p id="parrado3">Este es mi parrafo 3</p>
+    <script>
+      /*var titulo = document.getElementById('titulo');
+      //console.log("Titulo: "+titulo.innerHTML);
+        console.log(`titulo: ${titulo.innerHTML}`);
+        var parrafo = document.getElementById("parrafo");
+        //console.log("Parrafo: "+parrafo.innerHTML);
+        console.log(`parrafo: ${parrafo.innerHTML}`);
+        parrafo.innerHTML = 'Ahora si modifiqué el texto.'
+        console.log(`parrafo: ${parrafo.innerHTML}`);
+        titulo.innerHTML = "Este TITULO está MEJOR";*/
+
+            /*var parrafos = document.getElementsByTagName('h1');
+        var nombre = "LAURA ALEJANDRA BARRETO NIO";
+        console.log(`Numero de parrafos ${parrafos.length}`);
+        for(var i=0; i<parrafos.length;i++)
+        {
+        console.log(`i:${i} -> ${parrafos[i].innerHTML}`);
+        }
+       parrafos[0].innerHTML = "Bienvenid@ "+nombre;*/
+
+       /*var textos = document.getElementsByClassName('red');
+       for(var i=0; i<textos.length;i++)
+        {
+            textos[i].innerHTML = "Este es el texto "+i;
+        }*/
+
+        var textos = document.querySelectorAll('h1.red')
+        for(var i=0; i<textos.length;i++)
+        {
+            console.log(textos[i].innerHTML);
+            textos[i].innerHTML = "Este es el texto "+i;
+        }
+    </script>
+  </body>
+</html>
