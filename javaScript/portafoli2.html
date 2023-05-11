@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1 id="titulo" style="color: darkorange">Mi titulo</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Pagina2</a>
+      <a href="#">Pagina3</a>
+      <a href="#">Pagina4</a>
+      <a href="#">Pagina5</a>
+      <a href="#"
+        ><img src="https://www.flaticon.es/icono-gratis/html-5_5968267" alt=""
+      /></a>
+    </nav>
+    <p>
+      Lorem <span class="material-symbols-outlined"> home </span>ipsum dolor sit
+      amet consectetur adipisicing elit. Perferendis nemo unde et aliquid,
+      maiores ea illo accusamus enim fugiat minima deserunt hic, eius ut a
+      veritatis natus voluptate quibusdam. Ratione.
+    </p>
+    <img
+      id="imagen"
+      style="height: 400px"
+      src="/imagenes/Camida_Gatos_1.jpg"
+      alt=""
+    /><br />
+    <button onclick="CambiarImg(0)">
+      <img style="height: 20px" src="/imagenes/Camida_Gatos_1.jpg" alt="" />
+    </button>
+    <button onclick="CambiarImg(1)">
+      <img style="height: 20px" src="/imagenes/Comida_perros_1.jpg" alt="" />
+    </button>
+    <button onclick="CambiarImg(2)">
+      <img style="height: 20px" src="/imagenes/FullStack.jpg" alt="" />
+    </button>
+    <button onclick="CambiarImg(3)">
+      <img style="height: 20px" src="/imagenes/Camida_Gatos_1.jpg" alt="" />
+    </button>
+    <button onclick="CambiarImg(4)">
+      <img
+        style="height: 20px"
+        src="/imagenes/Comida_perros_1.jpg"
+        alt=""
+      /></button
+    ><br />
+
+    <p class="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+      dolore dolores accusantium saepe vero sint ipsa distinctio deleniti
+      consequuntur mollitia necessitatibus fuga id est voluptas sequi soluta,
+      totam tempora.
+    </p>
+    <p class="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+      dolore dolores accusantium saepe vero sint ipsa distinctio deleniti
+      consequuntur mollitia necessitatibus fuga id est voluptas sequi soluta,
+      totam tempora.
+    </p>
+    <p class="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+      dolore dolores accusantium saepe vero sint ipsa distinctio deleniti
+      consequuntur mollitia necessitatibus fuga id est voluptas sequi soluta,
+      totam tempora.
+    </p>
+    <p class="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+      dolore dolores accusantium saepe vero sint ipsa distinctio deleniti
+      consequuntur mollitia necessitatibus fuga id est voluptas sequi soluta,
+      totam tempora.
+    </p>
+    <p class="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+      dolore dolores accusantium saepe vero sint ipsa distinctio deleniti
+      consequuntur mollitia necessitatibus fuga id est voluptas sequi soluta,
+      totam tempora.
+    </p>
+
+    <script>
+      var imagen = [
+        "/imagenes/Camida_Gatos_1.jpg",
+        "/imagenes/Comida_perros_1.jpg",
+        "/imagenes/FullStack.jpg",
+        "/imagenes/Camida_Gatos_1.jpg",
+        "/imagenes/Comida_perros_1.jpg",
+      ];
+      var titulos = ["Gatos", "Perros", "Programación", "Gatos", "Perros"];
+      var colores = [
+        "Chocolate",
+        "chartreuse",
+        "aquamarine",
+        "crimson",
+        "darkorange",
+      ];
+
+      var i = 0;
+
+      function Adelante() {
+        i++;
+        if (i >= imagen.length) {
+          i = 0;
+        }
+        //console.log('Valor '+i)
+        document.getElementById("imagen").src = imagen[i];
+        document.getElementById("titulo").innerHTML = titulos[i];
+        document.getElementById("titulo").style.color = colores[i];
+        tInicio = date;
+      }
+      function Atras() {
+        i--;
+        if (i < 0) {
+          i = 4;
+        }
+        //console.log('Valor '+i)
+        document.getElementById("imagen").src = imagen[i];
+        document.getElementById("titulo").innerHTML = titulos[i];
+        document.getElementById("titulo").style.color = colores[i];
+        tInicio = date;
+        //console.log();
+      }
+      function CambiarImg(num) {
+        document.getElementById("imagen").src = imagen[num];
+        document.getElementById("titulo").innerHTML = titulos[num];
+        document.getElementById("titulo").style.color = colores[num];
+      }
+      date = new Date();
+      tInicio = new Date();
+      tFin = new Date();
+      function PasarImagen() {
+        requestAnimationFrame(PasarImagen);
+        date = new Date();
+        tiempoActual = date.getTime() - tInicio.getTime();
+        if (tiempoActual / 1000 > 5) {
+          Adelante();
+          tInicio = date;
+        }
+      }
+      PasarImagen();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manejo de Formularios en el DOM</title>
+  </head>
+  <body>
+    <h1 id="titulo">Mi titulo</h1>
+    <img style="height: 200px;" id="imagen" src="/imagenes/Camida_Gatos_1.jpg" alt=""/><br/>
+    <button onclick="Atras()">Atras</button>
+    <button onclick="Adelante()">Adelante</button>
+
+    <script>
+      /*function Mostrar(){
+            document.write('Texto para el documento');
+        }*/
+
+      /*function Mostrar(){
+            document.getElementById('titulo').innerHTML = "Otro Titulo";
+        }*/
+
+      /*function Mostrar(){
+            if( i == 1){
+                document.getElementById('imagen').src ='/imagenes/Camida_Gatos_1.jpg'
+                i=2;
+
+            }
+            else{
+                document.getElementById('imagen').src ='/imagenes/Comida_perros_1.jpg'
+                i=1;
+            }
+        }*/
+
+        var imagen = [
+        '/imagenes/Camida_Gatos_1.jpg',
+        '/imagenes/Comida_perros_1.jpg',
+        '/imagenes/FullStack.jpg'];
+
+      var titulos = [
+        'Gatos', 
+        'Perros', 
+        'Programacion'];
+
+      //var imagen1='/imagenes/Camida_Gatos_1.jpg';
+      //var imagen2='/imagenes/Comida_perros_1.jpg';
+
+      var i = 0;
+
+      function Adelante() {
+        i++;
+
+        if (i >= imagen.length) {
+          i = 0;
+        }
+        //console.log('Valor '+i)
+
+        document.getElementById("imagen").src = imagen[i];
+        document.getElementById("titulo").innerHTML = titulos[i];
+        tInicio = date;
+      }
+
+      function Atras() {
+        i--;
+
+        if (i < 0) {
+          i = 4;
+        }
+
+        //console.log('Valor '+i)
+        document.getElementById("imagen").src = imagen[i];
+        document.getElementById("titulo").innerHTML = titulos[i];
+        tInicio = date;
+        //console.log();
+      }
+
+      date = new Date();
+      tInicio = new Date();
+      tFin = new Date();
+
+      function PasarImagen() {
+        requestAnimationFrame(PasarImagen);
+        date = new Date();
+        tiempoActual = date.getTime() - tInicio.getTime();
+
+        if (tiempoActual / 1000 > 10) {
+          Adelante();
+          tInicio = date;
+        }
+        
+      }
+
+      PasarImagen();
+
+    </script>
+  </body>
+</html>
