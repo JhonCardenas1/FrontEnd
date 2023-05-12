@@ -1,0 +1,41 @@
+html{
+    box-sizing: border-box;
+    font-size: 60%;
+}
+
+*, 
+*:before, 
+*:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.entrada-blog a{
+    display: inline-block;
+    background-color: #262626;
+    color: #F2D0A7;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*la explicación comienza aquí*/
+
+

@@ -1,0 +1,61 @@
+html{
+    box-sizing: border-box;
+    font-size: 60%;
+}
+
+*, 
+*:before, 
+*:after{
+    box-sizing: inherit;
+    background-color: #262626;
+    color: #F2D0A7;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.entrada-blog a{
+    display: inline-block;
+    background-color: #525759;
+    color: #F2D0A7;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*la explicación comienza aquí*/
+
+@media (min-width: 768px){
+    .columnas-dos{
+        display: grid;
+        /*grid-template-columns: 50% 50%;*/
+        /*grid-template-columns: repeat(2,50%);*/
+        /*grid-template-columns: 1fr 1fr;*/
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 5rem;
+    }
+
+}
+
+
