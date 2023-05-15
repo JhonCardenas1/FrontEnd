@@ -36,6 +36,7 @@ body {
     color: #e67e22;
   }
   
+
   section {
     margin: 20px;
   }
@@ -48,23 +49,28 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
   }
   
   .productos article {
     width: 30%;
     margin-bottom: 30px;
+
+    border-radius: 10px;
   }
   
   .productos img {
     max-width: 100%;
-    display: block;
-    margin: 0 auto;
+    /*display: block;
+    margin: 0 auto;*/
   }
   
   .info-producto {
-    background-color: #f7dc6f;
+    background-color:  #3C4763;
+    color: white;
     padding: 10px;
     text-align: center;
+    border-radius: 10px;
   }
   
   .info-producto h3 {
